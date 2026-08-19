@@ -2,7 +2,7 @@
 Note: So we have 3 inbuilt functions to work on attrs.
 1. getattr(object,attr_name: str,default_value: Any (if attr is absent - basically suppresses the 'AttributeError Exception') or dot notation
 2. setattr(object,attr_name: str,attr_value: Any) or dot notation
-3. delattr(object,attr_name: str) or del keyword
+3. delattr(object,attr_name: str) or del keyword - both are same under the hood.
 
 """
 
