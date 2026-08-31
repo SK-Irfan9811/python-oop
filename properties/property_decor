@@ -1,0 +1,33 @@
+"""
+property is a class which is in lower for sertain reasons.
+1. Mostly we use this class as a decorater, so for micmking the same.
+2. most inbuilt classes are are types in c language in cpython, c has lowercase class naming convention.
+"""
+p=property()
+print(type(p))
+
+# decoraters revision
+
+#decorated funcion
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before the function is called.")
+        result = func(*args, **kwargs)
+        print("After the function is called.")
+        return result
+    return wrapper
+#un-decorated function
+# def un_decorated_function(a, b):
+#     print("This is an un-decorated function.")
+#     print(f"The sum of {a} and {b} is: {a + b}")
+
+# my_func=my_decorator(un_decorated_function)
+# print(my_func)
+# my_func(2, 3)
+
+# The decorater concept is a short hand notation of passing a funciotn to other for additional functionality.
+@my_decorator
+def my_func(a,b,c):
+    return a*b*c
+# this is equivalent to my_func=my_decorator(my_func)
+print(my_func(2,3,4))
